@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 let countOfValues = 150;
 let sleepTime = 10;
 const BORDER_SORT_DIV_DIV = 1;
@@ -98,7 +98,7 @@ const setup = function(){
   const askInt = function(message, value){
     let tmp = parseInt(prompt(message, value));
     if(!Number.isInteger(tmp)){
-      alert(tmp + " is not a number " + value + " is chosen!")
+      alert(tmp + " is not a number " + value + " is chosen!");
       tmp = value;
     }
     return tmp;
