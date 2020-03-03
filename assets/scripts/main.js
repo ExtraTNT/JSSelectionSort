@@ -17,26 +17,26 @@ const reloadButton = document.getElementById('reloadButton');
 const mainText = document.getElementById('mainText');
 
 const toggle = function(element){
-  element.classList.toggle('invisible');
-}
+  element.classList.toggle(INVISIBLE);
+};
 const reload = function(){ //dirty way
   window.open('./index.html');
   window.close();
-}
+};
 const draw = function(arr){
   for (var i = 0; i < SORT_DIV_DIV_ARRAY.length; i++) {
     SORT_DIV_DIV_ARRAY[i].style.width = (arr[i] + "px");
   }
-}
+};
 const Sleep = function(milliseconds) {
    return new Promise(resolve => setTimeout(resolve, milliseconds));
-}
+};
 // Selection sort with O(n^2) time complexity
 async function Selection_Sort(arr) { //can't use const async function -> giu stops working
 
   const compare = function(a, b) {
     return a - b; // use b - a; for reverse sorting
-  }
+  };
   let min = 0;
   let index = 0;
   let temp = 0;
@@ -67,7 +67,7 @@ const setup = function(){
     for (let btn of btns) {
       btn.style.height = BUTTON_SIZE + "px";
     }
-  }
+  };
   const createInputFields = function(){
     for (var i = 1; i <= countOfValues; i++) {
       let br = document.createElement('br');
@@ -79,7 +79,7 @@ const setup = function(){
       inputFieldsDiv.append(br);
       inputFieldsDiv.append(element);
     }
-  }
+  };
   const setupSortDiv = function(){
     for (var i = 1; i <= countOfValues; i++) {
       let element = document.createElement('div');
@@ -94,7 +94,7 @@ const setup = function(){
         countOfValues)) + "px");
       sortDiv.append(element);
     }
-  }
+  };
   const askInt = function(message, value){
     let tmp = parseInt(prompt(message, value));
     if(!Number.isInteger(tmp)){
@@ -102,7 +102,7 @@ const setup = function(){
       tmp = value;
     }
     return tmp;
-  }
+  };
   /*The Setp*/
   countOfValues = askInt("How many values?: ", countOfValues);
   sleepTime = askInt("How fast? (Sleep in ms): ", sleepTime);
@@ -111,7 +111,7 @@ const setup = function(){
   setupSortDiv();
   setButtonHeight();
   toggle(startDiv);
-}
+};
 const start = function(){
   const getAllValues = function(){
     let allValues = [];
@@ -121,7 +121,7 @@ const start = function(){
       }
     }
     return  allValues;
-  }
+  };
   const validateUserInput = function(value){
     let int = parseInt(value);
     if(int > MAX_VALUE_OF_NUMBER || !Number.isInteger(int)){
@@ -129,14 +129,14 @@ const start = function(){
       int = parseInt((Math.random()*MAX_VALUE_OF_NUMBER).toFixed());
     }
     return int;
-  }
+  };
   /*The start of the sorting process*/
   const startArray = getAllValues();
   draw(startArray);
   toggle(startDiv);
   toggle(sortDiv);
   Selection_Sort(startArray);
-}
+};
 /*Code: */
 setup();
 startButton.addEventListener('click', start);
