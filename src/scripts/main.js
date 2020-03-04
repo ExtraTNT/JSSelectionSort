@@ -1,5 +1,4 @@
 "use strict";
-
 var countOfValues = 150;
 var sleepTime = 10;
 var BORDER_SORT_DIV_DIV = 1;
