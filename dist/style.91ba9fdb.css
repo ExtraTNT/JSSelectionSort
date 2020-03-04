@@ -1,0 +1,22 @@
+body{
+	color: #eeeeee;
+	background-color: #222222;
+}
+input {
+	margin: 2px;
+	padding: 5px;
+}
+.visible {
+	display: block;
+}
+.invisible{
+	display: none;
+}
+.tabled{
+	border-style: outset;
+	border-color: #dddddd;
+	background-color: #222222;
+}
+
+
+/*# sourceMappingURL=/style.91ba9fdb.css.map */
