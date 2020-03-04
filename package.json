@@ -1,0 +1,22 @@
+{
+  "name": "jsselectionsort",
+  "version": "1.2.1",
+  "description": "A testing Project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ExtraTNT/JSSelectionSort.git"
+  },
+  "keywords": [
+    "testing"
+  ],
+  "author": "ExtraTNT",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ExtraTNT/JSSelectionSort/issues"
+  },
+  "homepage": "https://github.com/ExtraTNT/JSSelectionSort#readme"
+}
