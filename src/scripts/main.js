@@ -96,6 +96,7 @@ var setup = function setup() {
         }
       } finally {
         if (_didIteratorError) {
+          // eslint-disable-next-line no-unsafe-finally
           throw _iteratorError;
         }
       }
@@ -174,6 +175,7 @@ var start = function start() {
         }
       } finally {
         if (_didIteratorError2) {
+          // eslint-disable-next-line no-unsafe-finally
           throw _iteratorError2;
         }
       }
@@ -202,8 +204,6 @@ var start = function start() {
   Selection_Sort(startArray);
 };
 /*Code: */
-
-
 setup();
 startButton.addEventListener('click', start);
 reloadButton.addEventListener('click', reload);
